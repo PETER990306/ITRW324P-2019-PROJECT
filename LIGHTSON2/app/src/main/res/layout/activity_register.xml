@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registration_background"
+    tools:context=".RegisterActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="138dp"
+        android:layout_height="99dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/register"
+        app:srcCompat="@drawable/registration_icon" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/lbl_register"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/txtProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@android:color/background_light"
+        android:drawableLeft="@drawable/product_icon"
+        android:ems="10"
+        android:hint="product ID"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/txtRegEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtProduct"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@android:color/background_light"
+        android:drawableLeft="@drawable/email_icon"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/txtCellphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtRegEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="cellphone"
+        android:textAlignment="center"
+        android:backgroundTint="@android:color/background_light"
+        android:drawableLeft="@drawable/cellphone_icon"
+        android:inputType="phone"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/txtRegPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCellphone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@android:color/background_light"
+        android:drawableLeft="@drawable/password_icon"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/txtConfirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtRegPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@android:color/background_light"
+        android:drawableLeft="@drawable/confirmpassword_icon"
+        android:ems="10"
+        android:hint="confirm Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="153dp"
+        android:layout_height="33dp"
+        android:layout_below="@id/txtConfirmPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/white"
+        android:text="@string/register"
+        android:textColor="#70070707"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/lblRecoverPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRegister"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:text="@string/recover_password"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+</RelativeLayout>
