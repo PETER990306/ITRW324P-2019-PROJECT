@@ -1,9 +1,6 @@
 package com.itrw324.lights_on;
 
 
-
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
