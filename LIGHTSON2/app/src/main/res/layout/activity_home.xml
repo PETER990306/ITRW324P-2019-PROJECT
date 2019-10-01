@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgViewGarage"
+        android:layout_centerHorizontal="true"
+        android:text="@string/exterior"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:id="@+id/imgViewKitchen"
+        android:layout_width="124dp"
+        android:layout_height="106dp"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/darker_gray"
+        app:srcCompat="@drawable/kitchens_icon" />
+
+    <ImageView
+        android:id="@+id/imgViewBedroom"
+        android:layout_width="wrap_content"
+        android:layout_height="105dp"
+        android:layout_below="@id/imgViewKitchen"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_toRightOf="@id/imgViewKitchen"
+        android:background="@android:color/darker_gray"
+        app:srcCompat="@drawable/bedroom_icon" />
+
+    <ImageView
+        android:id="@+id/imgViewBathroom"
+        android:layout_width="122dp"
+        android:layout_height="108dp"
+        android:layout_below="@id/imgViewKitchen"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/darker_gray"
+        app:srcCompat="@drawable/bathrom_icon" />
+
+    <ImageView
+        android:id="@+id/imgViewDining"
+        android:layout_width="111dp"
+        android:layout_height="104dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@id/imgViewKitchen"
+        android:background="@android:color/darker_gray"
+        app:srcCompat="@drawable/dining_room_icon" />
+
+    <ImageView
+        android:id="@+id/imgViewGarage"
+        android:layout_width="137dp"
+        android:layout_height="117dp"
+        android:layout_below="@id/imgViewBathroom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/darker_gray"
+        app:srcCompat="@drawable/garage_icon" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgViewKitchen"
+        android:layout_marginLeft="80dp"
+        android:text="KITCHEN"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgViewDining"
+        android:layout_marginLeft="200dp"
+        android:text="DINING ROOM"
+        android:textColor="#FAFFFFFF"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgViewBedroom"
+        android:layout_marginLeft="200dp"
+        android:text="BEDROOM"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgViewBathroom"
+        android:layout_marginLeft="80dp"
+        android:text="BATHROOM"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic" />
+</RelativeLayout>

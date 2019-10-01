@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LIGHTS-ON</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="lbl_login">LOGIN</string>
+    <string name="lbl_register">REGISTER</string>
+    <string name="btnregister">Register</string>
+    <string name="recover_password">Recover Password</string>
+    <string name="exterior">EXTERIOR</string>
+</resources>
