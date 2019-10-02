@@ -95,4 +95,5 @@
         android:text="@string/register"
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
+
 </RelativeLayout>
