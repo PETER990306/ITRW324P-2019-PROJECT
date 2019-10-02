@@ -28,7 +28,6 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                     if(passw.getText().toString().equals(confpassw.getText().toString())){
                         Toast.makeText(getBaseContext(),"Registration success",Toast.LENGTH_SHORT).show();
                         openHomeActivity();
@@ -36,8 +35,6 @@ public class RegisterActivity extends AppCompatActivity {
                     else {
                         Toast.makeText(getBaseContext(),"Incorrect confirm password",Toast.LENGTH_SHORT).show();
                     }
-
-
 
             }
         });

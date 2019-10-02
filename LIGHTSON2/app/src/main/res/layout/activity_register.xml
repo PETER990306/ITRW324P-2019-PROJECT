@@ -128,14 +128,4 @@
         android:textColor="#70070707"
         android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/lblRecoverPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnRegister"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="7dp"
-        android:text="@string/recover_password"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
 </RelativeLayout>
