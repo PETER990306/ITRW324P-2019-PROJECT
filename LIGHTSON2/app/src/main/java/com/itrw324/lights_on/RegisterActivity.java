@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
     private Button btnReg;
-    private EditText passw,confpassw;
+    private EditText passw,confpassw,produk,email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,17 +21,24 @@ public class RegisterActivity extends AppCompatActivity {
         btnReg = findViewById(R.id.btnRegister);
         passw  = findViewById(R.id.txtRegPassword);
         confpassw = findViewById(R.id.txtConfirmPassword);
+        produk = findViewById(R.id.txtProduct);
+        email = findViewById(R.id.txtEmail);
 
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(passw.getText().toString().equals(confpassw.getText().toString())){
-                    Toast.makeText(getBaseContext(),"Registration success",Toast.LENGTH_SHORT).show();
-                    openHomeActivity();
-                }
-                else {
-                    Toast.makeText(getBaseContext(),"Incorrect confirm password",Toast.LENGTH_SHORT).show();
-                }
+
+
+                    if(passw.getText().toString().equals(confpassw.getText().toString())){
+                        Toast.makeText(getBaseContext(),"Registration success",Toast.LENGTH_SHORT).show();
+                        openHomeActivity();
+                    }
+                    else {
+                        Toast.makeText(getBaseContext(),"Incorrect confirm password",Toast.LENGTH_SHORT).show();
+                    }
+
+
+
             }
         });
 
