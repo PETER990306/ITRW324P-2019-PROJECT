@@ -54,6 +54,19 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+        bedroom1switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if(isChecked){
+                    Toast.makeText(getBaseContext(),"Light turned on",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(getBaseContext(),"Light turned off",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
    
    /* public void ConnectionEstablishment(String str) throws IOException
