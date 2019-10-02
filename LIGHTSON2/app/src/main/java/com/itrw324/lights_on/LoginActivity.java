@@ -12,8 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class LoginActivity extends AppCompatActivity {
-    private Button btnEnter;
-    private TextView lblReg;
+    private Button btnEnter;//refers to the login button on the login page
+    private TextView lblReg;//refers to the register textview or label on the login page
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +37,14 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
+    //this method opens the home page
     public void openHomeActivity(){
         Intent intent = new Intent(this,HomeActivity.class);
         startActivity(intent);
     }
+
+    //this method opens the register page
     public void openRegisterActivity(){
         Intent intent = new Intent(this,RegisterActivity.class);
         startActivity(intent);
