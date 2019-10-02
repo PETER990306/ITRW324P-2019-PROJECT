@@ -4,7 +4,10 @@ package com.itrw324.lights_on;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.Toast;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -24,27 +27,20 @@ public class HomeActivity extends AppCompatActivity {
 
         kitchenswitch = findViewById(R.id.swtchkitchen);
 
-        kitchenswitch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try{
-                            ConnectionEstablishment("Light bulb turned on");
-                        }
-                        catch (UnknownHostException e) {
-                            e.printStackTrace();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }).start();
-            }
-        });
+       kitchenswitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+           @Override
+           public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+               if(isChecked){
+                   Toast.makeText(getBaseContext(),"Light turned on",Toast.LENGTH_SHORT).show();
+               }
+               else{
+                   Toast.makeText(getBaseContext(),"Light turned off",Toast.LENGTH_SHORT).show();
+               }
+           }
+       });
     }
    
-    public void ConnectionEstablishment(String str) throws IOException
+   /* public void ConnectionEstablishment(String str) throws IOException
     {
         Socket socket;
         int Port=2009;// temporary port to be changed later
@@ -58,5 +54,5 @@ public class HomeActivity extends AppCompatActivity {
         printwriter.close();
         socket.close();
 
-    }
+    }*/
 }
