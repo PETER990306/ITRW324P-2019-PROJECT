@@ -13,10 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="false"
         android:layout_centerVertical="false"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="150dp"
         android:text="KITCHEN "
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
     <Switch
         android:id="@+id/swtchkitchen"
@@ -32,10 +33,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView3"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         android:text="DINING ROOM"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
     <Switch
         android:id="@+id/switchdining"
@@ -43,17 +45,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/swtchkitchen"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="15dp" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView4"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         android:text="BEDROOM 1"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
     <Switch
         android:id="@+id/switchbedroom1"
@@ -61,17 +64,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/switchdining"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="15dp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView5"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         android:text="BEDROOM 2"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
     <Switch
         android:id="@+id/switchbedroom2"
@@ -79,17 +83,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/switchbedroom1"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="15dp" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView6"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         android:text="BATHROOM"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
     <Switch
         android:id="@+id/switchbathroom"
@@ -97,5 +102,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/switchbedroom2"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="HOME"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic" />
 </RelativeLayout>
