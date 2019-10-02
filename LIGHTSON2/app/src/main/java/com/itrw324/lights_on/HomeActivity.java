@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Switch kitchenswitch,bedroomswitch,bathroomswitch;
+    Switch kitchenswitch,bedroom1switch,bathroomswitch,diningswitch,bedroom2switch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,10 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         kitchenswitch = findViewById(R.id.swtchkitchen);
+        diningswitch = findViewById(R.id.switchdining);
+        bedroom1switch = findViewById(R.id.switchbedroom1);
+        bathroomswitch = findViewById(R.id.switchbathroom);
+        bedroom2switch = findViewById(R.id.switchbedroom2);
 
        kitchenswitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
            @Override
@@ -38,6 +42,18 @@ public class HomeActivity extends AppCompatActivity {
                }
            }
        });
+
+        diningswitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if(isChecked){
+                    Toast.makeText(getBaseContext(),"Light turned on",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(getBaseContext(),"Light turned off",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
    
    /* public void ConnectionEstablishment(String str) throws IOException
