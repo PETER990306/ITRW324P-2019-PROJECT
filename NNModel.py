@@ -6,13 +6,13 @@ from sklearn.metrics import explained_variance_score, \
     median_absolute_error
 from sklearn.model_selection import train_test_split
 
-# read in the csv data into a pandas data frame and set the date as the index
-df = pd.read_csv('end-part2_df.csv').set_index('date')
 
-# execute the describe() function and transpose the output so that it doesn't overflow the width of the screen
+df = pd.read_csv().set_index()
+
+
 df.describe().T
 
-# execute the info() function
+
 df.info()
 <class 'pandas.core.frame.DataFrame'>
 Index: 997 entries, 2015-01-04 to 2017-09-27
@@ -39,18 +39,18 @@ mintempm_3         997 non-null float64
 dtypes: float64(36), int64(3)
 memory usage: 311.6+ KB
 
-# First drop the maxtempm and mintempm from the dataframe
+
 df = df.drop(['mintempm', 'maxtempm'], axis=1)
 
-# X will be a pandas dataframe of all columns except meantempm
+
 X = df[[col for col in df.columns if col != 'meantempm']]
 
-# y will be a pandas series of the meantempm
+
 y = df['meantempm']
 
-# split data into training set and a temporary set using sklearn.model_selection.traing_test_split
+
 X_train, X_tmp, y_train, y_tmp = train_test_split(X, y, test_size=0.2, random_state=23)
-# take the remaining 20% of data in X_tmp, y_tmp and split them evenly
+
 X_test, X_val, y_test, y_val = train_test_split(X_tmp, y_tmp, test_size=0.5, random_state=23)
 
 X_train.shape, X_test.shape, X_val.shape
