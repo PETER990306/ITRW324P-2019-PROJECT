@@ -167,39 +167,21 @@ mintempm           1000 non-null int64
 meantempm_1        999 non-null float64
 meantempm_2        998 non-null float64
 meantempm_3        997 non-null float64
-meandewptm_1       999 non-null float64
-meandewptm_2       998 non-null float64
-meandewptm_3       997 non-null float64
-meanpressurem_1    999 non-null float64
-meanpressurem_2    998 non-null float64
-meanpressurem_3    997 non-null float64
+
 maxhumidity_1      999 non-null float64
 maxhumidity_2      998 non-null float64
 maxhumidity_3      997 non-null float64
 minhumidity_1      999 non-null float64
 minhumidity_2      998 non-null float64
 minhumidity_3      997 non-null float64
+
 maxtempm_1         999 non-null float64
 maxtempm_2         998 non-null float64
 maxtempm_3         997 non-null float64
 mintempm_1         999 non-null float64
 mintempm_2         998 non-null float64
 mintempm_3         997 non-null float64
-maxdewptm_1        999 non-null float64
-maxdewptm_2        998 non-null float64
-maxdewptm_3        997 non-null float64
-mindewptm_1        999 non-null float64
-mindewptm_2        998 non-null float64
-mindewptm_3        997 non-null float64
-maxpressurem_1     999 non-null float64
-maxpressurem_2     998 non-null float64
-maxpressurem_3     997 non-null float64
-minpressurem_1     999 non-null float64
-minpressurem_2     998 non-null float64
-minpressurem_3     997 non-null float64
-precipm_1          889 non-null float64
-precipm_2          889 non-null float64
-precipm_3          888 non-null float64
+
 dtypes: float64(36), int64(3)
 memory usage: 312.5 KB
 
