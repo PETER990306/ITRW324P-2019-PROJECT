@@ -29,24 +29,6 @@
         android:textSize="24sp"
         android:textStyle="bold|italic" />
 
-    <EditText
-        android:id="@+id/txtProduct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:backgroundTint="@android:color/background_light"
-        android:drawableLeft="@drawable/product_icon"
-        android:ems="10"
-        android:hint="product ID"
-        android:inputType="numberSigned"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textStyle="italic" />
 
     <EditText
         android:id="@+id/txtRegEmail"
@@ -65,22 +47,6 @@
         android:textColorHint="#FFFFFF"
         android:textStyle="italic" />
 
-    <EditText
-        android:id="@+id/txtCellphone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtRegEmail"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="cellphone"
-        android:textAlignment="center"
-        android:backgroundTint="@android:color/background_light"
-        android:drawableLeft="@drawable/cellphone_icon"
-        android:inputType="phone"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textStyle="italic" />
 
     <EditText
         android:id="@+id/txtRegPassword"
@@ -128,4 +94,41 @@
         android:textColor="#70070707"
         android:textSize="18sp" />
 
+    <EditText
+        android:id="@+id/txtProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@android:color/background_light"
+        android:drawableLeft="@drawable/product_icon"
+        android:ems="10"
+        android:hint="product ID"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/txtCellphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtRegEmail"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:hint="cellphone"
+        android:textAlignment="center"
+        android:backgroundTint="@android:color/background_light"
+        android:drawableLeft="@drawable/cellphone_icon"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
 </RelativeLayout>
+

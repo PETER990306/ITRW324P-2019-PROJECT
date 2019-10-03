@@ -30,33 +30,34 @@ public class RegisterActivity extends AppCompatActivity {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    int produkt = Integer.parseInt(produk.getText().toString());
-                    String emaill = email.getText().toString();
+                    String produkt = produk.getText().toString();
+
                     String pass = passw.getText().toString();
                     String cell = passw.getText().toString();
                     String confpass = confpassw.getText().toString();
+                    String mail = email.getText().toString();
 
-                    if(produkt==0||emaill.equals("")||pass.equals("")||confpass.equals("")||cell.equals("")){
-                        Toast.makeText(getApplicationContext(),"Complete all the fields",Toast.LENGTH_SHORT).show();
+                    if(produkt.equals("")||mail.equals("")||pass.equals("")||confpass.equals("")||cell.equals("")){
+                        Toast.makeText(getBaseContext(),"Complete all the fields",Toast.LENGTH_SHORT).show();
                     }
                     else {
                         if(pass.equals(confpass)){
-                            Boolean checkemail = usersdb.emailVerification(emaill);
+                            Boolean checkemail = usersdb.emailVerification(mail);
                             if(checkemail==true){
-                                Boolean insert = usersdb.addUser(produkt,emaill,cell,pass);
+                                Boolean insert = usersdb.addUser(produkt,mail,cell,pass);
                                 if(insert==true){
-                                    Toast.makeText(getApplicationContext(),"Registered successfully",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getBaseContext(),"Registered successfully",Toast.LENGTH_SHORT).show();
                                 }
                             }
                             else{
-                                Toast.makeText(getApplicationContext(),"Email already registered",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getBaseContext(),"Email already registered",Toast.LENGTH_SHORT).show();
                             }
                         }
 
                         Toast.makeText(getBaseContext(),"Incorrect confirm password",Toast.LENGTH_SHORT).show();
                     }
 
-                   /* if(passw.getText().toString().equals(confpassw.getText().toString())){
+                    /*if(passw.getText().toString().equals(confpassw.getText().toString())){
                         Toast.makeText(getBaseContext(),"Registration success",Toast.LENGTH_SHORT).show();
                         openHomeActivity();
                     }

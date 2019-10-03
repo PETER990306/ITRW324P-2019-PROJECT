@@ -23,7 +23,7 @@ public class Database extends SQLiteOpenHelper {
 
     }
 
-    public boolean addUser(int product_id,String email, String cellphone,String password){
+    public boolean addUser(String product_id,String email, String cellphone,String password){
         SQLiteDatabase userdb = this.getWritableDatabase();
         ContentValues contentValues  = new ContentValues();
         contentValues.put("Product ID",product_id);

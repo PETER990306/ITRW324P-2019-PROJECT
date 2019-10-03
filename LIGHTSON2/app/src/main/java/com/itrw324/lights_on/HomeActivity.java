@@ -126,8 +126,8 @@ public class HomeActivity extends AppCompatActivity {
     public void ConnectionEstablishment(String str) throws IOException
     {
         Socket socket;
-        int Port=2009;// change this when you get RPI
-        String Server_add="192.168.1.5";// change this when you get RPI
+        int Port=8080;// change this when you get RPI
+        String Server_add="196.252.254.120";// change this when you get RPI
         PrintWriter printwriter;
 
         socket = new Socket(Server_add,Port);
