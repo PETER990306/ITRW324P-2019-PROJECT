@@ -30,15 +30,45 @@ public class HomeActivity extends AppCompatActivity {
         bedroom1switch = findViewById(R.id.switchbedroom1);
         bathroomswitch = findViewById(R.id.switchbathroom);
         bedroom2switch = findViewById(R.id.switchbedroom2);
-
+//28265548@student.g.nwu.ac.za
        kitchenswitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
            @Override
            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                if(isChecked){
                    Toast.makeText(getBaseContext(),"Light turned on",Toast.LENGTH_SHORT).show();
+
+                   new Thread(new Runnable() {
+                       @Override
+                       public void run() {
+                           try
+                           {
+                               ConnectionEstablishment("ON");
+                           } catch (UnknownHostException e) {
+                               e.printStackTrace();
+                           } catch (IOException e) {
+                               e.printStackTrace();
+                           }
+                       }
+                   }).start();
+
                }
                else{
                    Toast.makeText(getBaseContext(),"Light turned off",Toast.LENGTH_SHORT).show();
+
+                   new Thread(new Runnable() {
+                       @Override
+                       public void run() {
+                           try
+                           {
+                               ConnectionEstablishment("Off");
+                           } catch (UnknownHostException e) {
+                               e.printStackTrace();
+                           } catch (IOException e) {
+                               e.printStackTrace();
+                           }
+                       }
+                   }).start();
+
                }
            }
        });
@@ -92,12 +122,12 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
-   
-   /* public void ConnectionEstablishment(String str) throws IOException
+
+    public void ConnectionEstablishment(String str) throws IOException
     {
         Socket socket;
-        int Port=2009;// temporary port to be changed later
-        String Server_add="192.168.1.5"; //temporary ip change as soon as lerato brings the RPI
+        int Port=2009;// change this when you get RPI
+        String Server_add="192.168.1.5";// change this when you get RPI
         PrintWriter printwriter;
 
         socket = new Socket(Server_add,Port);
@@ -107,5 +137,5 @@ public class HomeActivity extends AppCompatActivity {
         printwriter.close();
         socket.close();
 
-    }*/
+    }
 }
