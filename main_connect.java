@@ -13,5 +13,5 @@ import java.net.URL;
 public class LogIn_Activity extends Activity{
   private Button btnEnter;
   private TextView lblRegt;
-
+  private Button btnView;
 }
