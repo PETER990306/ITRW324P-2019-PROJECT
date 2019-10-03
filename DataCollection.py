@@ -142,11 +142,6 @@ maxtempm_3         997 non-null object
 mintempm_1         999 non-null object
 mintempm_2         998 non-null object
 mintempm_3         997 non-null object
-maxdewptm_1        999 non-null object
-maxdewptm_2        998 non-null object
-maxdewptm_3        997 non-null object
-mindewptm_1        999 non-null object
-mindewptm_2        998 non-null object
 mindewptm_3        997 non-null object
 maxpressurem_1     999 non-null object
 maxpressurem_2     998 non-null object
