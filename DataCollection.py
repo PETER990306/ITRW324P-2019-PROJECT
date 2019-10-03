@@ -149,9 +149,7 @@ maxpressurem_3     997 non-null object
 minpressurem_1     999 non-null object
 minpressurem_2     998 non-null object
 minpressurem_3     997 non-null object
-precipm_1          999 non-null object
-precipm_2          998 non-null object
-precipm_3          997 non-null object
+
 dtypes: object(39)
 memory usage: 312.5+ KB
 
