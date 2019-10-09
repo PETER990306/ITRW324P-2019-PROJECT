@@ -29,19 +29,11 @@ public class Log_in_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getIPandPort();
-                CMD = "Up";
+                CMD = "Log_in";
                 Socket_AsyncTask cmd_increase_servo = new Socket_AsyncTask();
                 cmd_increase_servo.execute();
             }
         });
-        btnDown.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getIPandPort();
-                CMD = "Down";
-                Socket_AsyncTask cmd_increase_servo = new Socket_AsyncTask();
-                cmd_increase_servo.execute();
-            }
-        });
+        
 		
 	}
