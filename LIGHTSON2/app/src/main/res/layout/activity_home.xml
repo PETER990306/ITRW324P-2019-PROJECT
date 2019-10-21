@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_background"
+    android:background="@drawable/homebackground"
     tools:context=".HomeActivity">
 
     <TextView
@@ -13,18 +13,18 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="false"
         android:layout_centerVertical="false"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="150dp"
-        android:text="KITCHEN "
+        android:text="Lights"
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
 
     <Switch
-        android:id="@+id/swtchkitchen"
+        android:id="@+id/swtchLight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="false"
-        android:layout_marginLeft="200dp"
+        android:layout_marginLeft="100dp"
         android:layout_marginTop="150dp"
         android:textColor="#FFC107" />
 
@@ -32,87 +32,52 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView3"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="20dp"
-        android:text="DINING ROOM"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="ASX Home"
         android:textColor="#FFFFFF"
-        android:textSize="18sp" />
-
-    <Switch
-        android:id="@+id/switchdining"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/swtchkitchen"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="15dp" />
+        android:textColorHint="#FFFFFF"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView4"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="20dp"
-        android:text="BEDROOM 1"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="35dp"
+        android:text="Temparature: "
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
-
-    <Switch
-        android:id="@+id/switchbedroom1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/switchdining"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="15dp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView5"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="20dp"
-        android:text="BEDROOM 2"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="10dp"
+        android:text="Humidity:"
         android:textColor="#FFFFFF"
+        android:textColorHint="#F8FFFFFF"
         android:textSize="18sp" />
 
-    <Switch
-        android:id="@+id/switchbedroom2"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btnActivity"
+        android:layout_width="207dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/switchbedroom1"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="15dp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView6"
-        android:layout_marginLeft="60dp"
+        android:layout_below="@id/btnStreaming"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:text="BATHROOM"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
+        android:text="Activity" />
 
-    <Switch
-        android:id="@+id/switchbathroom"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btnStreaming"
+        android:layout_width="209dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/switchbedroom2"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="15dp" />
+        android:layout_below="@id/textView3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Streaming" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:text="HOME"
-        android:textAllCaps="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold|italic" />
 </RelativeLayout>
