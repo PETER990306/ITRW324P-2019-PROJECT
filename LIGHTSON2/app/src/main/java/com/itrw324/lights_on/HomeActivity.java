@@ -2,7 +2,10 @@ package com.itrw324.lights_on;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -17,7 +20,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Switch lightswitch,bedroom1switch,bathroomswitch,diningswitch,bedroom2switch;
+   Switch lightswitch;
+   Button btnstream,btnactivity;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +75,38 @@ public class HomeActivity extends AppCompatActivity {
            }
        });
 
+       btnstream = findViewById(R.id.btnStreaming);
+       btnstream.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               openStreamingActivity();
+           }
+       });
+
+        btnstream = findViewById(R.id.btnActivity);
+        btnstream.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMainActivity();
+            }
+        });
+
 
     }
+
+
+    public void openMainActivity(){
+        Intent intent = new Intent(HomeActivity.this,MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
+    }
+
+    public void openStreamingActivity(){
+        Intent intent = new Intent(this,StreamingActivity.class);
+        startActivity(intent);
+    }
+
 
     public void ConnectionEstablishment(String str) throws IOException
     {
