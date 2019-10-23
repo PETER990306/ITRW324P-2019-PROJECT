@@ -94,7 +94,8 @@
         android:background="@android:color/black"
         android:text="@string/login"
         android:textColor="#BFFFFFFF"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:onClick = "Send" />
 
     <TextView
         android:id="@+id/lblRegister"
