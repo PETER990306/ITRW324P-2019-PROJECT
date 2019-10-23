@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -104,6 +104,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     class Create_Part extends AsyncTask<String, String, String> {
+
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -114,29 +115,31 @@ public class LoginActivity extends AppCompatActivity {
             pDialog.show();
         }
 
-        @Override
-        protected String doInBackground(String... args) {
-            String String_name = emailText.getText().toString();
-            String Int_Part = passwordText.getText().toString();
 
-            List<NameValuePair> params = new ArrayList<>();
-            params.add(new BasicNameValuePair("Name", String_name));
-            params.add(new BasicNameValuePair("part_nr", Int_Part));
+            @Override
+            protected String doInBackground(String... args) {
+                String String_email = emailText.getText().toString();
+                String String_password = passwordText.getText().toString();
 
-            JSONObject json = jsonParser.makeHttpRequest("RaspberryPi_IP/db_create.php", "POST", params);
+                List<NameValuePair> params = new ArrayList<>();
+                params.add(new BasicNameValuePair("Email", String_email));
+                params.add(new BasicNameValuePair("password", String_password));
 
-            try {
-                int success = json.getInt("success");
+                JSONObject json = jsonParser.makeHttpRequest("192.168.137.69/db_create.php", "POST", params);
 
-                if(success == 1){
-                    finish();
+                try {
+                    int success = json.getInt("success");
+
+                    if (success == 1) {
+                        finish();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-            } catch (JSONException e) {
-                e.printStackTrace();
+
+                return null;
             }
 
-            return null;
-        }
 
         protected void onPostExecute(String file_url){
             pDialog.dismiss();
@@ -146,5 +149,5 @@ public class LoginActivity extends AppCompatActivity {
         {
             new Create_Part().execute();
         }
-    }
+    }*/
 }
