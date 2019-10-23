@@ -47,7 +47,6 @@ feature = 'meantempm'
 
 rows = tmp.shape[0]
 
-
 nth_prior_measurements = [None]*N + [tmp[feature][i-N] for i in range(N, rows)]
 
 col_name = "{}_{}".format(feature, N)
@@ -64,7 +63,7 @@ def derive_nth_day_feature(df, feature, N):
     if feature != 'date':
         for N in range(1, 4):
             derive_nth_day_feature(df, feature, N)
-			
+	
 			df.columns
 			
 	   Index(['meantempm', 'maxhumidity',
