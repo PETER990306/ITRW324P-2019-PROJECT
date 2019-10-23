@@ -5,7 +5,7 @@ from sklearn.metrics import explained_variance_score, \
     mean_absolute_error, \
     median_absolute_error
 from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
+
 
 df = pd.read_csv().set_index()
 
@@ -83,11 +83,11 @@ for i in range(100):
                                                                shuffle=False)))
 
 evaluations[0]
-{'average_loss': 31.116383, 'global_step': 400, 'loss': 3111.6382}
 
+
+import matplotlib.pyplot as plt
 %matplotlib inline
 
-# manually set the parameters of the figure to and appropriate size
 plt.rcParams['figure.figsize'] = [14, 10]
 
 loss_values = [ev['loss'] for ev in evaluations]
@@ -109,10 +109,7 @@ print("The Mean Absolute Error: %.2f degrees Celcius" % mean_absolute_error(
                                             y_test, predictions))  
 print("The Median Absolute Error: %.2f degrees Celcius" % median_absolute_error(
                                             y_test, predictions))
-INFO:tensorflow:Restoring parameters from tf_wx_model/model.ckpt-40000
-The Explained Variance: 0.88
-The Mean Absolute Error: 3.11 degrees Celcius
-The Median Absolute Error: 2.51 degrees Celcius
+
 
 		
 									   
