@@ -5,7 +5,7 @@ from sklearn.metrics import explained_variance_score, \
     mean_absolute_error, \
     median_absolute_error
 from sklearn.model_selection import train_test_split
-
+import matplotlib.pyplot as plt
 
 df = pd.read_csv().set_index()
 
@@ -81,32 +81,10 @@ for i in range(100):
                                                                y_val,
                                                                num_epochs=1,
                                                                shuffle=False)))
-INFO:tensorflow:Create CheckpointSaverHook.
-INFO:tensorflow:Saving checkpoints for 1 into tf_wx_model/model.ckpt.
-INFO:tensorflow:step = 1, loss = 1.11335e+07
-INFO:tensorflow:global_step/sec: 75.7886
-INFO:tensorflow:step = 101, loss = 36981.3 (1.321 sec)
-INFO:tensorflow:global_step/sec: 85.0322
-... A WHOLE LOT OF LOG OUTPUT ...
-INFO:tensorflow:step = 39901, loss = 5205.02 (1.233 sec)
-INFO:tensorflow:Saving checkpoints for 40000 into tf_wx_model/model.ckpt.
-INFO:tensorflow:Loss for final step: 4557.79.
-INFO:tensorflow:Starting evaluation at 2017-12-05-13:48:43
-INFO:tensorflow:Restoring parameters from tf_wx_model/model.ckpt-40000
-INFO:tensorflow:Evaluation [1/1]
-INFO:tensorflow:Finished evaluation at 2017-12-05-13:48:43
-INFO:tensorflow:Saving dict for global step 40000: average_loss = 10.2416, global_step = 40000, loss = 1024.16
-INFO:tensorflow:Starting evaluation at 2017-12-05-13:48:43
-INFO:tensorflow:Restoring parameters from tf_wx_model/model.ckpt-40000
-INFO:tensorflow:Finished evaluation at 2017-12-05-13:48:43
-INFO:tensorflow:Saving dict for global step 40000: average_loss = 10.2416, global_step = 40000, loss = 1024.16
-
-(100 x 400 / 2) = 20,000 epochs
 
 evaluations[0]
 {'average_loss': 31.116383, 'global_step': 400, 'loss': 3111.6382}
 
-import matplotlib.pyplot as plt
 %matplotlib inline
 
 # manually set the parameters of the figure to and appropriate size
