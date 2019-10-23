@@ -34,8 +34,6 @@ def extract_weather_data(url, api_key, target_date, days):
 	
 	records = extract_weather_data(BASE_URL, API_KEY, target_date, 500)
 	
-# if you closed our terminal or Jupyter Notebook, reinitialize your imports and
-# variables first and remember to set your target_date to datetime(2016, 5, 16)
 records += extract_weather_data(BASE_URL, API_KEY, target_date, 500)
 
 df = pd.DataFrame(records, columns=features).set_index('date')
@@ -43,12 +41,9 @@ df = pd.DataFrame(records, columns=features).set_index('date')
 tmp = df[['meantempm']].head(10)
 tmp
 
-# 1 day prior
 N = 1
 
-# target measurement of mean temperature
 feature = 'meantempm'
-
 
 rows = tmp.shape[0]
 
