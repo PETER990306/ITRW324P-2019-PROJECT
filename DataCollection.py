@@ -75,8 +75,6 @@ def derive_nth_day_feature(df, feature, N):
        'maxtempm_3', 'mintempm_1', 'mintempm_2', 'mintempm_3', 'maxdewptm_1'],
        dtype='object')
 	   
-	   
-
 to_remove = [feature 
              for feature in features 
              if feature not in ['meantempm', 'mintempm', 'maxtempm']]
@@ -110,7 +108,6 @@ df.maxhumidity_1.hist()
 plt.title('Distribution of maxhumidity_1')
 plt.xlabel('maxhumidity_1')
 plt.show()
-
 
 df = df.dropna()
 
