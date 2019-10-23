@@ -88,74 +88,17 @@ to_keep = [col for col in df.columns if col not in to_remove]
 df = df[to_keep]
 df.columns
 
-Index(['meantempm', 'maxtempm', 'mintempm', 'meantempm_1', 'meantempm_2',
-       'meantempm_3','maxhumidity_1', 'maxhumidity_2', 'maxhumidity_3', 'minhumidity_1',
-       'minhumidity_2', 'minhumidity_3', 'maxtempm_1', 'maxtempm_2',
-       'maxtempm_3', 'mintempm_1', 'mintempm_2', 'mintempm_3',],
-      dtype='object') 
-
 df.info()
-<class 'pandas.core.frame.DataFrame'>
-DatetimeIndex: 1000 entries, 2015-01-01 to 2017-09-27
-Data columns (total 39 columns):
-meantempm          1000 non-null object
-maxtempm           1000 non-null object
-mintempm           1000 non-null object
-meantempm_1        999 non-null object
-meantempm_2        998 non-null object
-meantempm_3        997 non-null object
-
-maxhumidity_1      999 non-null object
-maxhumidity_2      998 non-null object
-maxhumidity_3      997 non-null object
-minhumidity_1      999 non-null object
-minhumidity_2      998 non-null object
-minhumidity_3      997 non-null object
-maxtempm_1         999 non-null object
-maxtempm_2         998 non-null object
-maxtempm_3         997 non-null object
-mintempm_1         999 non-null object
-mintempm_2         998 non-null object
-mintempm_3         997 non-null object
-
 
 dtypes: object(39)
 memory usage: 312.5+ KB
 
-
 df = df.apply(pd.to_numeric, errors='coerce')
 df.info()
-<class 'pandas.core.frame.DataFrame'>
-DatetimeIndex: 1000 entries, 2015-01-01 to 2017-09-27
-Data columns (total 39 columns):
-meantempm          1000 non-null int64
-maxtempm           1000 non-null int64
-mintempm           1000 non-null int64
-meantempm_1        999 non-null float64
-meantempm_2        998 non-null float64
-meantempm_3        997 non-null float64
-
-maxhumidity_1      999 non-null float64
-maxhumidity_2      998 non-null float64
-maxhumidity_3      997 non-null float64
-minhumidity_1      999 non-null float64
-minhumidity_2      998 non-null float64
-minhumidity_3      997 non-null float64
-
-maxtempm_1         999 non-null float64
-maxtempm_2         998 non-null float64
-maxtempm_3         997 non-null float64
-mintempm_1         999 non-null float64
-mintempm_2         998 non-null float64
-mintempm_3         997 non-null float64
-
-dtypes: float64(36), int64(3)
-memory usage: 312.5 KB
 
 spread = df.describe().T
 
 IQR = spread['75%'] - spread['25%']
-
 
 spread['outliers'] = (spread['min']<(spread['25%']-(3*IQR)))|(spread['max'] > (spread['75%']+3*IQR))
 
