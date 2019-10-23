@@ -11,30 +11,6 @@ df = pd.read_csv().set_index()
 df.describe().T
 
 df.info()
-<class 'pandas.core.frame.DataFrame'>
-Index: 997 entries, 2015-01-04 to 2017-09-27
-Data columns (total 39 columns):
-meantempm          997 non-null int64
-maxtempm           997 non-null int64
-mintempm           997 non-null int64
-meantempm_1        997 non-null float64
-meantempm_2        997 non-null float64
-meantempm_3        997 non-null float64
-maxhumidity_1      997 non-null float64
-maxhumidity_2      997 non-null float64
-maxhumidity_3      997 non-null float64
-minhumidity_1      997 non-null float64
-minhumidity_2      997 non-null float64
-minhumidity_3      997 non-null float64
-maxtempm_1         997 non-null float64
-maxtempm_2         997 non-null float64
-maxtempm_3         997 non-null float64
-mintempm_1         997 non-null float64
-mintempm_2         997 non-null float64
-mintempm_3         997 non-null float64
-
-dtypes: float64(36), int64(3)
-memory usage: 311.6+ KB
 
 df = df.drop(['mintempm', 'maxtempm'], axis=1)
 
