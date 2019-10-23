@@ -67,12 +67,9 @@ from sklearn.linear_model import LinearRegression
 
 regressor = LinearRegression()
 
-
 regressor.fit(X_train, y_train)
 
-
 prediction = regressor.predict(X_test)
-
 
 from sklearn.metrics import mean_absolute_error, median_absolute_error
 print("The Explained Variance: %.2f" % regressor.score(X_test, y_test))
