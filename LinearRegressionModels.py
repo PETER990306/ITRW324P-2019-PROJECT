@@ -22,12 +22,9 @@ import numpy as np
 
 plt.rcParams['figure.figsize'] = [16, 22]
 
-
 fig, axes = plt.subplots(nrows=6, ncols=3, sharey=True)
 
-
 arr = np.array(predictors).reshape(6, 3)
-
 
 for row, col_arr in enumerate(arr):
     for col, feature in enumerate(col_arr):
@@ -41,15 +38,12 @@ plt.show()
 X = df2[predictors]
 y = df2['meantempm']
 
-
 X = sm.add_constant(X)
 X.ix[:5, :5]
-
 
 alpha = 0.05
 
 model = sm.OLS(y, X).fit()
-
 
 model.summary()
 
