@@ -6,12 +6,9 @@ from sklearn.metrics import explained_variance_score, \
     median_absolute_error
 from sklearn.model_selection import train_test_split
 
-
 df = pd.read_csv().set_index()
 
-
 df.describe().T
-
 
 df.info()
 <class 'pandas.core.frame.DataFrame'>
