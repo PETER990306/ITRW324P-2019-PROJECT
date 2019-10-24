@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 
 # import the necessary packages
 import imutils
@@ -16,7 +16,7 @@ import os
 print("[INFO] quantifying faces...")
 imagePaths = list(paths.list_images('dataset'))
 
-# initialize the list of known encodings and known names
+# initialize the list of known encodings and known names(stored in the dataset folder) 
 knownEncodings = []
 knownNames = []
 
