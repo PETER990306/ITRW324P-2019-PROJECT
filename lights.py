@@ -1,8 +1,7 @@
 #https://www.youtube.com/watch?v=bOGltcgiXiU
 
-
+#packages time and RPi are declared 
 import time
-
 import RPi.GPIO as GPIO
 
 
@@ -13,5 +12,5 @@ GPIO.output(26, GPIO.LOW)
 
 #time.sleep(5)
 
-GPIO.output(26, GPIO.HIGH)
+GPIO.output(26, GPIO.HIGH) 
 GPIO.cleanup()
