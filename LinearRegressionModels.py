@@ -1,8 +1,14 @@
 import pickle
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+class LinearRegressionModels:
+
 with open('end-part1_df.pkl', 'rb') as fp:
     df = pickle.load(fp)
 
-import pandas as pd
 df = pd.read_csv('end-part2_df.csv').set_index('date')
 
 ŷ = β0 + β1 * x1 + β2 * x2 + ... + β(p-n) x(p-n) + Ε
@@ -13,10 +19,6 @@ predictors = ['meantempm_1',  'meantempm_2',  'meantempm_3',
               'mintempm_1',   'mintempm_2',   'mintempm_3',
               'maxtempm_1',   'maxtempm_2',   'maxtempm_3']
 df2 = df[['meantempm'] + predictors]
-
-import matplotlib
-import matplotlib.pyplot as plt
-import numpy as np
 
 %matplotlib inline
 
@@ -46,7 +48,6 @@ alpha = 0.05
 model = sm.OLS(y, X).fit()
 
 model.summary()
-
 
 X = X.drop('meandewptm_3', axis=1)
  
