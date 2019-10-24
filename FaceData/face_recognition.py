@@ -109,7 +109,7 @@ while True:
 		name = "Unknown"
 
 
-		# check to see if we have found a match
+		# check to see if a match is found 
 		if True in matches:
 			# find the indexes of all matched faces then initialize a
 			# dictionary to count the total number of times each face
