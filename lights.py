@@ -1,16 +1,17 @@
 #https://www.youtube.com/watch?v=bOGltcgiXiU
 
-import RPI.GPIO as GPIO 
-import datetime 
+
+import time
+
+import RPi.GPIO as GPIO
+
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(20,GPIO.OUT)
+GPIO.setup(26, GPIO.OUT)
+GPIO.setwarnings(False)
+GPIO.output(26, GPIO.LOW)
 
-While True :
-	now = datetime.datetime.now().time()
-	if now.hour == 20 and now.minute == 44 :
-		GPIO.output(20,True)
-	
-	
-finally :
-	GPIO.cleanup()
+#time.sleep(5)
+
+GPIO.output(26, GPIO.HIGH)
+GPIO.cleanup()
