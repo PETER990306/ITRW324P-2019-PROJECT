@@ -5,6 +5,8 @@ import pandas as pd
 import requests
 import matplotlib.pyplot as plt
 
+class DataCollection:
+
 API_KEY = 
 BASE_URL = 
 
