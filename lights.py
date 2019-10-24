@@ -12,5 +12,5 @@ GPIO.output(26, GPIO.LOW)
 
 #time.sleep(5)
 
-GPIO.output(26, GPIO.HIGH) 
+GPIO.output(26, GPIO.HIGH) #OUTPUT IN gpio pin 26 will be displayed , through a relay module the light will be switched on
 GPIO.cleanup()
