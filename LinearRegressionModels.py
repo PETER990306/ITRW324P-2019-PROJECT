@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-class LinearRegressionModels:
+class LinearRegression:
 
 with open('end-part1_df.pkl', 'rb') as fp:
     df = pickle.load(fp)
