@@ -155,6 +155,6 @@ fps.stop()
 print("[INFO] elasped time: {:.2f}".format(fps.elapsed()))
 print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
 
-# do a bit of cleanup
+# perform a cleanup
 cv2.destroyAllWindows()
 vs.stop()
