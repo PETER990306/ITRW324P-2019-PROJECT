@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class ConnectionClass {
     String classs = "com.mysql.jdbc.Driver";
 
-    String url = "jdbc:mysql://192.168.43.48/andro";
+    String url = "jdbc:mysql://http://http://localhost/phpmyadmin/sql.php?server=1&db=itrw324&table=users&pos=0";
     String un = "root";
     String password = "Kh@mbul3";
 
