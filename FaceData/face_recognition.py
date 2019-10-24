@@ -20,14 +20,14 @@ imagePaths = list(paths.list_images('dataset'))
 knownEncodings = []
 knownNames = []
 
-# loop over the image paths
+# loop over the paths of the images stored in the dataset folder 
 for (i, imagePath) in enumerate(imagePaths):
 	# extract the person name from the image path
 	print("[INFO] processing image {}/{}".format(i + 1,
 		len(imagePaths)))
 	name = imagePath.split(os.path.sep)[-2]
 
-	# load the input image and convert it from RGB (OpenCV ordering)
+	# load the input image(s) and convert it from RGB (OpenCV ordering)
 	# to dlib ordering (RGB)
 	image = cv2.imread(imagePath)
 	rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
