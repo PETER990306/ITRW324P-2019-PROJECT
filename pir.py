@@ -1,3 +1,4 @@
+#import packages time and RPi 
 import time
 #from gpiozero import MotionSensor
 import RPi.GPIO as GPIO
